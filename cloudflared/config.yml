@@ -1,0 +1,6 @@
+ingress:
+  - hostname: chat.uurl.uz
+    service: http://open-webui:8080
+  - hostname: ai.uurl.uz
+    service: http://open-webui:8080
+  - service: http_status:404
