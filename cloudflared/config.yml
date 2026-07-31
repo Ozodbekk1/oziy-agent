@@ -1,6 +1,11 @@
 ingress:
-  - hostname: chat.uurl.uz
-    service: http://open-webui:8080
   - hostname: ai.uurl.uz
-    service: http://open-webui:8080
+    service: http://host.docker.internal:3001
+
+  - hostname: "*.uurl.uz"
+    service: http://host.docker.internal:3000
+
+  - hostname: uurl.uz
+    service: http://host.docker.internal:3000
+
   - service: http_status:404
